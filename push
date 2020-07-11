@@ -1,0 +1,1 @@
+git add . ; git commit -m "ansible" ; git push -u origin master
