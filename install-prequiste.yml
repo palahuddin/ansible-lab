@@ -11,8 +11,8 @@
       yum:
         name: "{{ packages }}"
         state: latest
+        autoremove: true
       vars:
         packages:
-        - epel-release
         - httpd
   
