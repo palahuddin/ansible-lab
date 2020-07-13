@@ -2,10 +2,6 @@
   name: Dependency
   hosts: all
   tasks: 
-    - name: Install RPM 
-      yum:
-        name: /opt/mysql57-community-release-el7-9.noarch.rpm
-        state: present
     - name: yum update 
       yum:
         update_only:
