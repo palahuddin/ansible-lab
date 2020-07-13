@@ -6,12 +6,10 @@
       yum:
         name: /opt/mysql57-community-release-el7-9.noarch.rpm
         state: present
-  tasks:
     - name: yum update 
       yum:
         update_only:
         state: latest
-  tasks:
     - name: Install Dependency
       yum:
         name: "{{ packages }}"
@@ -26,19 +24,15 @@
         - unzip
         - git
         - wget
-  tasks:
     - name: Download Repo Mysql
       command: 
         cmd: /usr/bin/wget https://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm
-  
-  tasks:
     - name: Install Mysql Client
       yum:
-        name: "{{ packages }}"
+        name: /root/mysql57-community-release-el7-9.noarch.rpm
         state: present
-      vars:
-        packages:
-        - mysql-server
+        name: mysql-server
+        state: present
          
   
 
