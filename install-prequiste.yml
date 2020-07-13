@@ -2,7 +2,7 @@
   name: Dependency
   hosts: all
   tasks:
-    - name: Install Dependency
+    - name: yum update 
       yum:
         update_only:
         state: latest
