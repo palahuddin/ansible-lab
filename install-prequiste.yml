@@ -4,11 +4,15 @@
   tasks:
     - name: Install Dependency
       yum:
+        update_only:
+        state: latest
+  tasks:
+    - name: Install Dependency
+      yum:
         name: "{{ packages }}"
         state: latest
       vars:
         packages:
-        - update
         - epel-release
         - httpd
   
