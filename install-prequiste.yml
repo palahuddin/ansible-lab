@@ -26,7 +26,6 @@
         - unzip
         - git
         - wget
-        - mysql-clients
   tasks:
     - name: Install Mysql Client
       command: 
