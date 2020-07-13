@@ -27,12 +27,12 @@
         - git
         - wget
   tasks:
-    - name: Install Mysql Client
+    - name: Download Repo Mysql
       command: 
         cmd: /usr/bin/wget https://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm
   
   tasks:
-    - name: Install Dependency
+    - name: Install Mysql Client
       yum:
         name: "{{ packages }}"
         state: present
