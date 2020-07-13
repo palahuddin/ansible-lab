@@ -15,11 +15,11 @@
         packages:
         - epel-release
         - httpd
-        - mysql-client
         - rsync
         - screen
         - zip
         - unzip
         - git
-        
+        - wget
+
   
