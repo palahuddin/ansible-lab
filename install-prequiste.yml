@@ -23,12 +23,15 @@
     - name: Download Repo Mysql
       command: 
         cmd: /usr/bin/wget https://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm
-    - name: Install Mysql Client
+    - name: Install Repo 
       yum:
         name: /root/mysql57-community-release-el7-9.noarch.rpm
         state: present
+    - name: Install Mysql Client
+      yum:
         name: mysql-server
         state: present
+       
          
   
 
