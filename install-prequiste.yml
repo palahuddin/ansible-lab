@@ -38,7 +38,7 @@
         state: present
       vars:
         packages:
-        - mysql-clients
+        - mysql-server
          
   
 
