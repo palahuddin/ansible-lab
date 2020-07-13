@@ -1,5 +1,5 @@
 -
-  name: Dependency
+  name: Jojonomic Dependency
   hosts: all
   tasks: 
     - name: yum update 
