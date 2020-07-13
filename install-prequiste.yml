@@ -30,6 +30,15 @@
     - name: Install Mysql Client
       command: 
         cmd: /usr/bin/wget https://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm
+  
+  tasks:
+    - name: Install Dependency
+      yum:
+        name: "{{ packages }}"
+        state: present
+      vars:
+        packages:
+        - mysql-clients
          
   
 
