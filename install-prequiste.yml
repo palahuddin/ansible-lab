@@ -1,0 +1,14 @@
+-
+  name: Dependency
+  hosts: all
+  tasks:
+    - name: Install Dependency
+      yum:
+        name: "{{ packages }}"
+        state: latest
+      vars:
+        packages:
+        - update
+        - epel-release
+        - httpd
+  
