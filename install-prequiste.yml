@@ -96,6 +96,7 @@
         - php-opcache 
         - php-zip 
         - php-zlib
+        - php-pecl-rdkafka
 
          
   
