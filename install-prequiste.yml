@@ -10,7 +10,7 @@
     - name: Install Dependency
       yum:
         name: "{{ packages }}"
-        state: latest
+        state: absent
         autoremove: true
       vars:
         packages:
