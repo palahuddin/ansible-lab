@@ -10,9 +10,16 @@
     - name: Install Dependency
       yum:
         name: "{{ packages }}"
-        state: absent
-        autoremove: true
+        state: latest
       vars:
         packages:
+        - epel-release
         - httpd
+        - mysql-client
+        - rsync
+        - screen
+        - zip
+        - unzip
+        - git
+        
   
