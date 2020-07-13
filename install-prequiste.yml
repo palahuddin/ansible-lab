@@ -2,6 +2,17 @@
   name: Dependency
   hosts: all
   tasks:
+    - name: Install Mysql Client
+      get_url: 
+        url: https://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm
+        dest: /opt/
+
+  tasks: 
+    - name: Install RPM 
+      yum:
+        name: /opt/mysql57-community-release-el7-9.noarch.rpm
+        state: present
+  tasks:
     - name: yum update 
       yum:
         update_only:
@@ -21,5 +32,7 @@
         - unzip
         - git
         - wget
+        - mysql-clients
+  
 
   
