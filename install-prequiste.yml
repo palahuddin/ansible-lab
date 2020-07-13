@@ -1,12 +1,6 @@
 -
   name: Dependency
   hosts: all
-  tasks:
-    - name: Install Mysql Client
-      get_url: 
-        url: https://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm
-        dest: /opt/mysql57-community-release-el7-9.noarch.rpm
-
   tasks: 
     - name: Install RPM 
       yum:
@@ -33,6 +27,11 @@
         - git
         - wget
         - mysql-clients
+  tasks:
+    - name: Install Mysql Client
+      command: 
+        cmd: /usr/bin/wget https://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm
+         
   
 
   
