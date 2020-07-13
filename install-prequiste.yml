@@ -37,10 +37,10 @@
       shell: yum-config-manager --enable remi-php70
     - name: Install PHP Jojonomic
       yum:
-        name: "{{ jojonomic-php }}"
+        name: "{{ jojonomicphp }}"
         state: present
       vars:
-        jojonomic-php:
+        jojonomicphp:
         - php 
         - php-bcmath 
         - php-bz2 
